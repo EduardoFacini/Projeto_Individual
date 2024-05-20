@@ -1,0 +1,1 @@
+Repositório focado no desenvolvimento do projeto indivídual que é embazado no tema de Jiu-Jitsu. Que tem como objetivo a criação de um site com uma dashboard que incentiva pessoas a praticarem Jiu-Jitsu.
