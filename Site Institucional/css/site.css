@@ -1,0 +1,365 @@
+/* Cor 1: 08070F */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section {
+    margin-right: 5px;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {  
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #08070f;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    color: white;
+}
+
+li :hover {
+    color: #CD0000;
+    transition: 0.7s ease;
+}
+
+h1 {
+    font-size: 85px;
+    color: #CD0000;
+}
+
+h2 {
+    color: transparent;
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: 1.1px white;
+}
+
+h3 {
+    margin: 0px 0px 13px 0px;
+    color: #CD0000;
+    font-size: 53px;
+}
+
+h4 {
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+}
+
+h5 {
+    color: transparent;
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: 0.8px white;
+}
+
+button {
+    cursor: pointer;
+    background-color: #CD0000;
+    width: 25%;
+    max-width: 210px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #50020c;
+    transition: 0.7s ease;
+}
+
+.navBar {
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav-list {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    padding-right: 160px;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 60px;
+}
+
+.cdtr-log {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    padding-right: 60px;
+}
+
+.cdtr-log li {
+    letter-spacing: 3px;
+    margin-left: 15px;
+}
+
+.imgNav {
+    padding: 9px 0px 0px 0px;
+    width: 170px;
+    position: absolute;
+    left: 100px;
+}
+
+.father-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to bottom left, #330006 -220%, #08070f 65%, #330006 100%);
+}
+    
+.card-inicio1 {
+    width: 43%;
+}
+
+.card-inicio2 {
+    width: 30%;
+}
+
+.svg {
+    width: 100%;
+    max-width: 600px;  
+}
+
+.father-2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to top left, #330006 -200%, #08070f 65%, #330006 100%);
+    padding-top: 30px;
+}
+
+.child {
+    height: 70.58%;
+    display: flex;
+}
+
+.img-sobre {
+    width: 95%;
+    max-width: 950px;
+    margin-left: 50px;
+}
+
+.text-sobre {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-sobre p {
+    font-size: 14px;
+}
+
+.titulo-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.titulo-sobre h2 {
+    margin-top: -14px;
+    margin-left: 125px;
+    font-size: 65px;
+    -webkit-text-stroke: 1.1px rgba(255, 255, 255, 0.501);
+}
+
+.titulo-sobre h3 {
+    margin: -15px 0px 2px 13px;
+    font-size: 67px;
+}
+
+.objetivo {
+    width: 60%;
+    margin-left: 68px;
+}
+
+.objetivo h3 {
+    margin: 13px 0px 8px 0px;
+    font-size: 41px;
+}
+
+.valores {
+    width: 60%;
+    margin-left: 11px;
+}
+
+.valores h3 {
+    margin: 20px 0px 8px 0px;
+    font-size: 41px;
+}
+
+.visao {
+    width: 60%;
+    margin-left: -46px;
+}
+
+.visao h3 {
+    margin: 20px 0px 8px 0px;
+    font-size: 41px;
+}
+
+.father-3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    background: linear-gradient(to bottom left, #330006 -220%, #08070f 65%, #330006 100%);
+}
+
+.father-card {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-beneficios {
+    width: 45%;
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.card-beneficios {
+    position: relative;
+    width: 27.5%;
+    height: 55vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 12px 0px 12px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px white;
+    transition: width 0.5s, height 0.5s;
+}
+
+.img-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-bottom: 23px;
+}
+
+.tam-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tam-p {
+    width: 100%;
+    height: 100%;
+    max-width: 410px;
+    z-index: 1;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tam-p h3 {
+    font-size: 33px;
+}
+
+#beneficios .card-beneficios:hover {
+    width: 29%;
+    height: 56.5vh;
+    box-shadow: 0px 0px 14px 0px #b0b0b0;
+}
+
+.card-beneficios::before {
+    content: "";
+    position: absolute;
+    width: 96%;
+    height: 145%;
+    background-color: white;
+    animation: animacao 7s linear infinite;
+}
+
+.card-beneficios::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to bottom left, #330006 -60%,#08070f 50%);;
+    inset: 2px;
+    border-radius: inherit;
+}
+
+@keyframes animacao {
+    100%{
+        transform:  rotate(360deg);
+    }
+}
+
+.father-4 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to top left, #330006 -200%, #08070f 65%, #330006 100%);
+}
+
+.img-foto {
+    width: 250px;
+    border-radius: 60px;
+}
+
+.rodape {
+    width: 100%;
+    height: 28vh;
+    background-color: #06070f;
+}
