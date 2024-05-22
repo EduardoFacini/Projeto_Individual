@@ -380,28 +380,82 @@ button {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding-top: 15px;
     background: linear-gradient(to top left, #330006 -200%, #08070f 65%, #330006 100%);
 }
 
 .portifolio {
-    width: 78%;
-    height: 82vh;
-    border: 2px solid white;
-    border-radius: 40px;
+    width: 80%;
+    height: 73vh;
+    transition: all 0.2s;
+    position: relative;
+    box-sizing: border-box;
+}
+  
+.card-inner {
+    width: 100%;
+    height: inherit;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(7px);
+    border-radius: 8px;
+}
+  
+.portifolio:hover {
+    transform: scale(1.03) rotate(0.5deg);
+}
+  
+.circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#CD0000, #08060f);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+  
+.circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+}
+  
+.circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+}
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+}
+  
+@keyframes move-down1 {
+    to {
+      transform: translateY(10px);
+    }
 }
 
 .descricao {
     height: 80%;
     width: 53%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.descricao h3 {
+    font-size: 38px;
+}
+
+.descricao p {
+    font-size: 18px;
 }
 
 .foto {
@@ -417,7 +471,7 @@ button {
 .img-foto {
     width: 100%;
     max-width: 290px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 section.card {
@@ -431,15 +485,15 @@ section.card {
     justify-content: center;
     overflow: hidden;
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+}
 
-  .card:hover {
+.card:hover {
     transform: scale(1.05);
     box-shadow: 0 0px 13px white;
     color: #ffffff;
-  }
+}
   
-  .card__content {
+.card__content {
     color: white;
     position: absolute;
     top: 0;
@@ -452,39 +506,39 @@ section.card {
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 3.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(7px);
     border-radius: 10px;
-  }
+}
   
-  .card:hover .card__content {
+.card:hover .card__content {
     transform: rotateX(0deg);
-  }
+}
+
+.card h1 {
+    font-size: 30px;
+}
+
+.card p {
+    font-size: 17px;
+}
   
-  .card__title {
+.card__title {
     margin: 0;
     padding-left: 5px;
     font-size: 24px;
     color: white;
     font-weight: 700;
-  }
+}
   
-  .card:hover svg {
+.card:hover svg {
     scale: 0;
-  }
+}
   
-  .card__description {
+.card__description {
     margin: 10px 0 0;
     font-size: 14px;
     color: white;
     line-height: 1.4;
-  }
-
-.dedo {
-    position: absolute;
-    top: 327.3vh;
-    left: 64.1vw;
-    z-index: 2;
-    transform: rotate(40deg);
 }
 
 .rodape {
