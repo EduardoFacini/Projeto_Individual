@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {  
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #08070f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 45px;
+    margin-left: 70px;
+    color: #CD0000;
+    font-size: 3em;
+}
+
+h2 {
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+h4 {
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+p {
+    margin-left: 45px;
+    margin-right: 45px;
+    font-size: 16px;
+}
+
+button {
+    color: black;
+}
+
+.texto {
+    width: 50%;
+    height: 72vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 0 0 15px darkgray;
+    border-radius: 10px;
+    transition: 0.9s ease;
+}
+
+.texto:hover {
+    box-shadow: 0 0 20px darkgray;
+    transform: perspective(500px) translateZ(7px);
+}
+
+.botao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    width: 17%;
+    height: 45px;
+    border: 3px solid #CD0000;
+    border-radius: 45px;
+    transition: all 0.7s ease;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    margin: -15px 0 28px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+button:hover {
+    background: #CD0000;
+    color: white;
+    font-size: 19px;
+}
+  

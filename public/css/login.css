@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {  
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #08070f;
+    color: white;
+}
+
+.setinha {
+    position: absolute;
+    cursor: pointer;
+    top: 25px;
+    left: 30px;
+    width: 50px;
+}
+
+button {
+    cursor: pointer;
+    width: 60%;
+    padding: 15px 40px;
+    margin: 30px 0 0 0;
+    border-radius: 20px;
+    border: 0;
+    color: black;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.5s ease;
+  }
+  
+button:hover {
+    letter-spacing: 1.5px;
+    background-color: #ca0505;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #640101 0px 5px 15px 0px;
+}
+  
+button:active {
+    letter-spacing: 1.3px;
+    background-color: #860101;
+    transform: translateY(3px);
+    transition: 100ms;
+}
+
+a {
+    text-decoration: none;
+    color: #a70101;
+}
+
+.linhas {
+    position: absolute;
+    width: 100%;
+}
+
+.fundo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 50%;
+    height: 65vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 140px 180px 0 140px;
+    z-index: 1;
+}
+
+.text h1 {
+    font-size: 50px;
+    margin-bottom: 7px;
+    color: #a70101;
+}
+
+.text p {
+    font-size: 18px;
+}
+
+.login {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.card h1 {
+    padding-bottom: 22px;
+}
+
+.card {
+    width: 60%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: transparent   ;
+    backdrop-filter: blur(3.5px);
+    box-shadow: 0 0 15px 0 #921a1a;
+    transition: 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 25px 0 #921a1a;
+}
+
+.input {
+    position: relative;
+    padding: 20px 0 0;
+    margin: 8px 0 0;;
+    width: 100%;
+    max-width: 330px;
+}
+
+.campo {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    margin-bottom: 8px;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.campo::placeholder {
+    color: transparent;
+}
+
+.campo:placeholder-shown ~ .caixa {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.caixa {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 12px;
+    color: #868585;
+    pointer-events: none;
+}
+
+.campo:focus {
+    padding-top: 5px;
+    padding-bottom: 6px;
+    font-weight: 400;
+    border-width: 2px;
+    border-image: white;
+    border-image-slice: 1;
+}
+
+.campo:focus ~ .caixa {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.campo:required, .campo:invalid {
+    box-shadow: none;
+}
+
+.loading-div {
+    width: 50%;
+    display: none;
+}
+
+/* .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6005a 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+}
+  
+.card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+} */

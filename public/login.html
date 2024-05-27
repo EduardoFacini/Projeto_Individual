@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - BJJ UP</title>
+
+    <script src="./js/sessao.js"></script>
+
+    <title>Login - BJJ UP</title>
+    <link rel="shortcut icon" href="./assets/imgs/logoNav.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
+
+    <img src="./assets/svg/lines.svg" class="linhas">
+
+    <a href="./index.html"><img src="./assets/svg/setinha.svg" class="setinha"></a>
+
+    <div class="fundo">
+
+        <div class="text">
+
+            <h1>Bem-vindo de volta!</h1>
+            <h3>É ótimo vê-lo novamente!</h3>
+            <p>Faça login para continuar aproveitando todas as vantagens e recursos
+                exclusivos que oferecemos.</p>
+
+            <br><br>
+
+            <h3>Ainda não tem uma conta? <a href="cadastro.html">Clique aqui</a></h3>
+
+        </div>
+
+        <div class="login">
+
+            <div class="card">
+
+                <h1>LOGIN</h1>
+
+                <div class="input field">
+                    <input type="input" class="campo" placeholder="E-mail" required="" id="email_input"
+                        autocomplete="off">
+                    <label for="name" class="caixa">E-mail</label>
+                </div>
+
+                <div class="input field">
+                    <input type="password" class="campo" placeholder="Senha" required="" id="senha_input"
+                        autocomplete="off">
+                    <label for="name" class="caixa">Senha</label>
+                </div>
+
+                <button onclick="entrar()">Login</button>
+                <div id="div_aguardar" class="loading-div">
+                    <!-- <img src="./assets/circle-loading.gif" id="loading-gif" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json[0].email;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
+                    sessionStorage.ID_USUARIO = json[0].id;
+
+                    setTimeout(function () {
+                        window.location = "inicioQuiz.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

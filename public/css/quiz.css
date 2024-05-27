@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #08070f;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    height: 42vh;
+    width: 30%;
+    background: rgba(143, 8, 8, 0.502);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+h1 {
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.score p {
+    font-size: 30px;
+}
+
+.question {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.question p {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.botao1 {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.7s ease;
+}
+
+.botao1:hover {
+    background-color: #393737;
+    color: white;
+}
+
+.botao2 {
+    width: 350px;
+    margin-top: 10px;
+    display: block;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.7s ease;
+}
+
+.botao2:hover {
+    background-color: #393737;
+    color: white;
+}
+
+.botoes {
+    margin-top: 45px;
+}
+

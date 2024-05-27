@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJJ UP</title>
+    <link rel="shortcut icon" href="./assets/imgs/logoNav.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/quizInicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="texto">
+
+        <h1>Hora do Quiz</h1>
+        <br>
+        <p>
+            Seja você um faixa branca começando sua jornada ou um faixa preta experiente, este quiz é feito para testar
+            seus conhecimentos básicos sobre Jiu Jitsu de uma forma divertida e envolvente. O nosso quiz possui 10
+            perguntas simples que cobrem aspectos fundamentais do Jiu Jitsu.
+            <br><br>
+            <h4>Atenção! Mesmo se você já participou antes, sinta-se à vontade para tentar novamente e melhorar sua
+            pontuação!</h4>
+            <br>
+            <h2>Instruções:</h2>
+            <br>
+            <p>
+            1. Leia cada pergunta com atenção.
+            <br><br>
+            2. Escolha a resposta que você acredita ser correta entre as opções fornecidas.
+            <br><br>
+            3. Ao final, você verá sua pontuação e poderá compartilhar seu resultado com amigos.
+            <br><br>
+            Pronto para começar? Clique no botão abaixo e mostre que você é um verdadeiro conhecedor do Jiu Jitsu!
+            </p>
+
+            <div class="botao">
+                <button onclick="quiz()">Fazer Quiz!</button>
+            </div>
+            
+            <p>
+            Já fez o quiz antes e não quer repetir? Sem problemas! Você pode ir direto para o seu dashboard clicando no botão abaixo.
+            </p>
+
+            <div class="botao">
+                <button onclick="dashboard()">Já fiz o Quiz</button>
+            </div>
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    function quiz() {
+        window.location.href = "quiz.html";
+    }
+
+    function dashboard() {
+        window.location.href = "./dashboard/dashboard.html";
+    }
+
+</script>
