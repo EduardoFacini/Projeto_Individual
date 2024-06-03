@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BJJ UP - Início</title>
-    <link rel="shortcut icon" href="./assets/imgs/logoNav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/logoNav.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -26,6 +26,13 @@
 </head>
 
 <!-- <body onload=" atualizarFeed()"> -->
+<style>
+
+    p {
+        font-size: 25px;
+    }
+
+</style>
 
 <body>
 
@@ -50,20 +57,23 @@
             </div>
 
             <div class="btn-logout" onclick="limparSessao()">
-                <h3 style="cursor: pointer;">Sair</h3>
+                <a href="../index.html">
+                    <h3 style="cursor: pointer;">Sair</h3>
+                </a>
             </div>
 
         </div>
 
-        <div class="dash">
-            <div id="alerta">
-            </div>
+    </div>
 
-            <div class="btns-dash" id="btnAquario">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-            </div>
-            <div id="graficos">
-            </div>
+    <div class="dash">
+        <div id="alerta">
+        </div>
+
+        <div class="text-dash">
+            <h1 style="color: red;">BEM VINDO A DASHBOARD!</h1><br>
+            <p>Aqui você poderá ver a média de pontos de todos usuários que fizeram o quiz, basta apenas clicar em gráfico aqui no canto <br>
+            Lá é exibido quem fez mais e menos de 50 pontos, que é demonstrado através de um gráfico <br> pizza como duas cores.</p>
         </div>
     </div>
 
@@ -79,5 +89,5 @@
 
     window.onload = exibirAquariosDoUsuario();
 
-    
+
 </script>

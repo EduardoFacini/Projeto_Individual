@@ -29,7 +29,13 @@ select * from usuario;
 select * from pontuacaoTotal;
 
 SELECT 
-    SUM(CASE WHEN pontos >= 50 THEN 1 ELSE 0 END) AS acima,
-    SUM(CASE WHEN pontos < 50 THEN 1 ELSE 0 END) AS abaixo
+    SUM(
+		CASE 
+	WHEN pontos >= 50 THEN 1 ELSE 0 END
+	) AS acima,
+    SUM(
+		CASE 
+	WHEN pontos < 50 THEN 1 ELSE 0 END
+	) AS abaixo
 FROM 
     pontuacaoTotal;
