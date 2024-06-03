@@ -21,7 +21,7 @@
     rel="stylesheet">
 </head>
 
-<body onload="listar()">
+<body>
 
     <div class="alerta_erro">
       <div class="card_erro" id="cardErro">
@@ -107,14 +107,17 @@
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+      alert
+        ('Mensagem de erro para todos os campos em branco');
 
       finalizarAguardar();
       return false;
+    } else if (confirmacaoSenhaVar != senhaVar) {
+      alert('A confirmação de senha deve ser igual a senha')
+      finalizarAguardar();
+      return false;
     } else {
-      setInterval(sumirMensagem, 5000);
+      setInterval(sumirMensagem, 2500);
     }
 
     // Enviando o valor da nova input
@@ -156,22 +159,6 @@
       });
 
     return false;
-  }
-
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
   }
 
   function sumirMensagem() {
